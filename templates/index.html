@@ -7,17 +7,16 @@
     content="width=device-width, initial-scale=1, user-scalable=no"
   />
 </head>
-<body hx-boost="true">
+<body>
   <div class="wrapper">
     <div class="grid">
       <div id="header" class="grid-item title">
         <h1 class="">dacian c.</h1>
         <p>
-          aspiring designer and engineer<br />
+          aspiring designer and
+          engineer<br />
           based in
-          <span class="grow-text"
-            ><a href="https://www.aruba.com/us">aruba</a></span
-          >
+          <span class="grow-text"><a href="https://www.aruba.com/us">aruba</a></span>
         </p>
       </div>
       <div class="grid-item music grow">
@@ -50,12 +49,8 @@
       </div>
       <div class="grid-item server">
         <h2>server</h2>
-        <div class="data-table"
-          hx-get="/stats"
-          hx-trigger="load, every 10s"
-          hx-swap="innerHTML"
-        >
-          <!-- <div class="data-row">
+        <div class="data-table">
+          <div class="data-row">
             <span class="data-type">memory</span>
             <span class="data-value">0.0/0.0GB</span>
           </div>
@@ -66,7 +61,7 @@
           <div class="data-row">
             <span class="data-type">uptime</span>
             <span class="data-value">0 days</span>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
