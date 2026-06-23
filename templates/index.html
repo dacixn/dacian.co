@@ -1,0 +1,74 @@
+<!doctype html>
+<head>
+  <title>home</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+</head>
+<body hx-boost="true">
+  <div class="wrapper">
+    <div class="grid">
+      <div id="header" class="grid-item title">
+        <h1 class="">dacian c.</h1>
+        <p>
+          aspiring designer and engineer<br />
+          based in
+          <span class="grow-text"
+            ><a href="https://www.aruba.com/us">aruba</a></span
+          >
+        </p>
+      </div>
+      <div class="grid-item music grow">
+        <img
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c2/a0/a4/c2a0a495-ec33-27f1-c6db-0dff1c3ba15d/dj.pzrqoswp.jpg/600x600bb.jpg"
+        />
+        <div class="music-info">
+          <h2>souvlaki space station</h2>
+          <p>slowdive</p>
+          <span class="triangle">♫</span>
+        </div>
+      </div>
+      <div class="subsection-grid-item services grow">
+        <h2>software</h2>
+        <p>self-hosted goodies</p>
+        <span class="triangle-dark">◢</span>
+      </div>
+      <div class="subsection-grid-item projects grow">
+        <h2>projects</h2>
+        <p>check out what i'm working on</p>
+        <span class="triangle-dark">◢</span>
+      </div>
+      <div class="grid-item contact">
+        <h2>contact</h2>
+        <p>
+          send an email to<br /><span class="email selectable"
+            >hello[at]dacian[dot]co</span
+          ><br />to get in touch
+        </p>
+      </div>
+      <div class="grid-item server">
+        <h2>server</h2>
+        <div class="data-table"
+          hx-get="/stats"
+          hx-trigger="load, every 10s"
+          hx-swap="innerHTML"
+        >
+          <!-- <div class="data-row">
+            <span class="data-type">memory</span>
+            <span class="data-value">0.0/0.0GB</span>
+          </div>
+          <div class="data-row">
+            <span class="data-type">cpu</span>
+            <span class="data-value">0%</span>
+          </div>
+          <div class="data-row">
+            <span class="data-type">uptime</span>
+            <span class="data-value">0 days</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

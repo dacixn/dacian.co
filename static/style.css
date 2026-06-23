@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.selectable {
+  user-select: text;
+}
+html {
+  font-size: 24px;
+}
+body {
+  background-color: #fff2f6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.wrapper {
+  width: min(900px, 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: safe center;
+  margin: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 4vh;
+}
+.grid-item {
+  transition: 100ms ease-out;
+  grid-column: span 6;
+  background-color: #ffd9e6;
+  font-size: 1rem;
+  padding: 1rem;
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+  min-height: 0rem;
+}
+
+.grow:hover {
+  transition: 150ms ease-in-out;
+  transform: scale(1.02);
+  transform-origin: center;
+}
+.triangle {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.5rem;
+  font-family: "Google Sans";
+  color: #57023c7f;
+}
+
+.triangle-dark {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.5rem;
+  font-family: "Google Sans";
+  color: #880656;
+}
+
+h1,
+h2,
+p,
+.data-row {
+  font-size: 1rem;
+  font-family: "Google Sans";
+  color: #57023c;
+}
+.title {
+  display: flex;
+  flex-flow: column nowrap;
+  transform: none;
+  gap: 0.25rem;
+  background-color: #00000000;
+  overflow: hidden;
+}
+.grow-text {
+  transition: 200ms ease-in;
+  font-weight: 600;
+}
+.grow-text:hover {
+  transition: 200ms ease-out;
+  /* font-size: 1.25rem; */
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+}
+.title h1 {
+  font-variant: small-caps;
+  color: #26011c;
+  font-size: 1.1rem;
+}
+.title:hover {
+  transform: none;
+}
+.contact,
+.projects {
+  grid-column: span 7;
+}
+.server,
+.services {
+  grid-column: span 5;
+}
+.contact > h2,
+.server > h2 {
+  color: #57023c;
+}
+.music {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+.music-info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0rem;
+}
+.music img {
+  max-width: 125px;
+  pointer-events: none;
+  border-radius: 0.25rem;
+}
+.data-row {
+  display: flex;
+  justify-content: space-between;
+}
+.data-value,
+.email {
+  font-family: "Google Sans Code";
+  font-size: 0.85rem;
+}
+.content {
+  width: min(900px, 100%);
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  * {
+    /* border: 1px red solid; */
+  }
+}
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff2f6;
+}
+
+.subsection {
+  transition: 100ms ease-out;
+  background-color: #ffd9e6;
+  font-size: 1rem;
+  padding: 1rem;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  min-height: 0rem;
+}
+
+.subsection-grid {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.75em;
+  justify-content: center;
+}
+
+.subsection-grid-item {
+  transition: 100ms ease-out;
+  position: relative;
+  padding: 1em;
+  flex-shrink: 1;
+  flex-basis: 200px;
+  flex-grow: 1;
+  background-color: #fff2f6;
+  border: #880656 3px solid;
+  gap: 1.5em;
+  h1,
+  h2,
+  p {
+    color: #880656;
+  }
+}
+.subsection-grid-item:hover {
+  transition: 200ms ease-out;
+  background-color: #880656;
+  /* border-radius: 0.5rem; */
+
+  .triangle-dark,
+  h2,
+  p {
+    color: #fff2f6;
+  }
+  h2 {
+    font-variant: small-caps;
+    letter-spacing: 0rem;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 20px;
+  }
+  .wrapper {
+    width: 100%;
+    max-height: 100vh;
+  }
+  .content {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .grid {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .grid-item:hover {
+    transform: none;
+  }
+  .music img {
+    max-width: 100px;
+  }
+  .subsection-grid-item {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 40px;
+  }
+  .wrapper {
+    width: min(1800px, 100%);
+  }
+  .content {
+    width: min(1800px, 100%);
+  }
+  .music img {
+    max-width: 300px;
+  }
+}
