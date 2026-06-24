@@ -19,9 +19,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 .wrapper {
   width: min(900px, 100%);
   min-height: 100vh;
+  max-height: 100%;
   display: flex;
   align-items: safe center;
   margin: auto;
@@ -45,7 +47,9 @@ a {
   gap: 0.25rem;
   min-height: 0rem;
 }
-
+.extra {
+  grid-column: span 4;
+}
 .grow:hover {
   transition: 150ms ease-in-out;
   transform: scale(1.02);
@@ -58,7 +62,6 @@ a {
   font-family: "Google Sans";
   color: #57023c7f;
 }
-
 .triangle-dark {
   position: absolute;
   bottom: 0.25rem;
@@ -66,7 +69,6 @@ a {
   font-family: "Google Sans";
   color: #880656;
 }
-
 h1,
 h2,
 p,
@@ -77,10 +79,13 @@ p,
 }
 .title {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   flex-flow: column nowrap;
   transform: none;
   gap: 0.25rem;
-  background-color: #00000000;
+  background-color: #fff2f6;
   overflow: hidden;
 }
 .grow-text {
@@ -144,9 +149,6 @@ p,
   display: flex;
   flex-flow: column nowrap;
   gap: 0.5rem;
-  * {
-    /* border: 1px red solid; */
-  }
 }
 .header {
   display: flex;
@@ -158,7 +160,6 @@ p,
   padding: 1rem;
   background-color: #fff2f6;
 }
-
 .subsection {
   transition: 100ms ease-out;
   background-color: #ffd9e6;
@@ -171,21 +172,20 @@ p,
   gap: 1rem;
   min-height: 0rem;
 }
-
 .subsection-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-flow: row wrap;
   gap: 0.75em;
   justify-content: center;
 }
-
 .subsection-grid-item {
   transition: 100ms ease-out;
   position: relative;
   padding: 1em;
-  flex-shrink: 1;
+  /* flex-shrink: 1;
   flex-basis: 200px;
-  flex-grow: 1;
+  flex-grow: 1; */
   background-color: #fff2f6;
   border: #880656 3px solid;
   gap: 1.5em;
@@ -195,7 +195,8 @@ p,
     color: #880656;
   }
 }
-.subsection-grid-item:hover {
+.subsection-grid-item:hover,
+.subsection-grid-item:active {
   transition: 200ms ease-out;
   background-color: #880656;
   /* border-radius: 0.5rem; */
@@ -210,18 +211,19 @@ p,
     letter-spacing: 0rem;
   }
 }
-
 @media (max-width: 900px) {
   html {
     font-size: 20px;
   }
   .wrapper {
     width: 100%;
-    max-height: 100vh;
+    padding-top: 2rem;
+    max-height: 100%;
   }
   .content {
     max-width: 100%;
     padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .grid {
     max-width: 100%;
@@ -237,11 +239,13 @@ p,
   .music img {
     max-width: 100px;
   }
+  .subsection-grid {
+    display: flex;
+  }
   .subsection-grid-item {
     flex-basis: 100%;
   }
 }
-
 @media (min-width: 1800px) {
   html {
     font-size: 40px;
@@ -255,4 +259,7 @@ p,
   .music img {
     max-width: 300px;
   }
+}
+#hide-content {
+  display: none;
 }
