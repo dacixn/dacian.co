@@ -1,14 +1,13 @@
 <!doctype html>
 <head>
   <title>home</title>
-  
-  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="/static/style.css" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, user-scalable=no"
   />
   <meta charset="UTF-8">
-  <script src="https://unpkg.org/htmx.org"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
 </head>
 <body>
   <div
@@ -40,12 +39,13 @@
           src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c2/a0/a4/c2a0a495-ec33-27f1-c6db-0dff1c3ba15d/dj.pzrqoswp.jpg/600x600bb.jpg"
         />
         <div class="music-info">
-          <h2>souvlaki space station</h2>
-          <p>slowdive</p>
+          <h2>alison</h2>
+          <p id="artist">slowdive</p>
           <span class="triangle">♫</span>
         </div>
       </div>
-      <div class="subsection-grid-item services grow">
+      <div class="subsection-grid-item services grow"
+      hx-get="/time" hx-trigger="click" hx-target="#artist">
         <h2>software</h2>
         <p>self-hosted goodies</p>
         <span class="triangle-dark">◢</span>
@@ -68,7 +68,7 @@
         <div class="data-table">
           <div class="data-row">
             <span class="data-type">memory</span>
-            <span class="data-value">0.0/0.0GB</span>
+            <span hx-get="/mem" hx-trigger="load, every 30s" class="data-value">0.0/0.0GB</span>
           </div>
           <div class="data-row">
             <span class="data-type">cpu</span>
@@ -76,7 +76,7 @@
           </div>
           <div class="data-row">
             <span class="data-type">uptime</span>
-            <span class="data-value">0 days</span>
+            <span id="uptime" hx-get="/up" hx-trigger="load" class="data-value">0 days</span>
           </div>
         </div>
       </div>
