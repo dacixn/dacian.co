@@ -121,7 +121,7 @@ func main() {
 			"Uptime": stats.Uptime,
 		})
 	})
-	err = r.Run(":8080")
+	err = r.Run(os.Getenv("PORT"))
 	if err != nil {
 		log.Fatal(err)
 	}
