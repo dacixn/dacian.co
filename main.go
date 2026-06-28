@@ -121,5 +121,8 @@ func main() {
 			"Uptime": stats.Uptime,
 		})
 	})
-	r.Run(":8080")
+	err = r.Run(":8080")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
