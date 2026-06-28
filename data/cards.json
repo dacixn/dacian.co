@@ -6,7 +6,7 @@
       {
         "name": "dacian.co",
         "description": "dynamic web application built with Go and htmx",
-        "url": "https://dacian.co"
+        "url": "https://github.com/dacixn/dacian.co"
       },
       {
         "name": "sift",
@@ -28,11 +28,6 @@
         "name": "shared",
         "description": "a file-sharing server akin to 0x0.st",
         "url": "https://shared.1707070.xyz"
-      },
-      {
-        "name": "dacian.co",
-        "description": "dynamic web application built with Go and htmx",
-        "url": "https://dacian.co"
       }
     ]
   }
