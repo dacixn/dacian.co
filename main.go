@@ -25,15 +25,15 @@ func main() {
 
 	pages, err := getCardPagesFromJson("./data/cards.json")
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 	projects, err := getCardPageByName(pages, "projects")
 	if err != nil {
-		log.Println()
+		log.Println(err)
 	}
 	software, err := getCardPageByName(pages, "software")
 	if err != nil {
-		log.Println()
+		log.Println(err)
 	}
 	ct := &CurrentTrack{}
 	cs := &CurrentStats{}
