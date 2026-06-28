@@ -36,7 +36,7 @@ func getCardPagesFromJson(src string) ([]CardPage, error) {
 func getCardPageByName(pages []CardPage, name string) (CardPage, error) {
 	for _, v := range pages {
 		if v.Name == strings.ToLower(name) {
-			return v
+			return v, nil
 		}
 	}
 	return CardPage{}, fmt.Errorf("failed to locate page '%s'", name)
