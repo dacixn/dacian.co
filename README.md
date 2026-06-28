@@ -1,6 +1,5 @@
 # [♡ dacian.co](https://dacian.co)
 ### Portfolio website built with Go, Gin and htmx
----
 © 2026 Dacian C. - [MIT License](LICENSE)
 
 ## Preview
