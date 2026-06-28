@@ -6,8 +6,12 @@
     name="viewport"
     content="width=device-width, initial-scale=1, user-scalable=no"
   />
-  <meta charset="UTF-8">
-  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <script
+    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+    integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+    crossorigin="anonymous"
+  ></script>
 </head>
 <body>
   <div
@@ -34,27 +38,29 @@
           >
         </p>
       </div>
-      <div class="grid-item music grow">
-        <img
-          src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c2/a0/a4/c2a0a495-ec33-27f1-c6db-0dff1c3ba15d/dj.pzrqoswp.jpg/600x600bb.jpg"
-        />
+      <div class="grid-item music" hx-get="/music" hx-trigger="load, every 30s">
+        <img src="https://placehold.co/125x125" />
+        <!-- music template -->
         <div class="music-info">
-          <h2>alison</h2>
-          <p id="artist">slowdive</p>
+          <h2>title</h2>
+          <p id="artist">artist</p>
           <span class="triangle">♫</span>
         </div>
       </div>
-      <div class="subsection-grid-item services grow"
-      hx-get="/time" hx-trigger="click" hx-target="#artist">
-        <h2>software</h2>
-        <p>self-hosted goodies</p>
-        <span class="triangle-dark">◢</span>
-      </div>
-      <div class="subsection-grid-item projects grow">
-        <h2>projects</h2>
-        <p>check out what i'm working on</p>
-        <span class="triangle-dark">◢</span>
-      </div>
+      <a href="/software">
+        <div class="subsection-grid-item services grow">
+          <h2>software</h2>
+          <p>self-hosted goodies</p>
+          <span class="triangle-dark">◢</span>
+        </div>
+      </a>
+      <a href="/projects">
+        <div class="subsection-grid-item projects grow">
+          <h2>projects</h2>
+          <p>check out what i'm working on</p>
+          <span class="triangle-dark">◢</span>
+        </div>
+      </a>
       <div class="grid-item contact">
         <h2>contact</h2>
         <p>
@@ -63,12 +69,13 @@
           ><br />to get in touch
         </p>
       </div>
-      <div class="grid-item server">
+      <!-- server template -->
+      <div class="grid-item server" hx-get="/stats" hx-trigger="load, every 30s">
         <h2>server</h2>
         <div class="data-table">
           <div class="data-row">
             <span class="data-type">memory</span>
-            <span hx-get="/mem" hx-trigger="load, every 30s" class="data-value">0.0/0.0GB</span>
+            <span class="data-value">0.0/0.0GB</span>
           </div>
           <div class="data-row">
             <span class="data-type">cpu</span>
@@ -76,7 +83,7 @@
           </div>
           <div class="data-row">
             <span class="data-type">uptime</span>
-            <span id="uptime" hx-get="/up" hx-trigger="load" class="data-value">0 days</span>
+            <span class="data-value">0 days</span>
           </div>
         </div>
       </div>

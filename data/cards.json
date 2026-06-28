@@ -1,0 +1,39 @@
+[
+  {
+    "name": "projects",
+    "description": "open-source learning experiences",
+    "cards": [
+      {
+        "name": "dacian.co",
+        "description": "dynamic web application built with Go and htmx",
+        "url": "https://dacian.co"
+      },
+      {
+        "name": "sift",
+        "description": "a personalised tool for sorting files according to your needs",
+        "url": "https://github.com/dacixn/sift"
+      },
+      {
+        "name": "shared-cli",
+        "description": "remote CLI for Shared, a file-sharing server",
+        "url": "https://github.com/dacixn/shared-cli"
+      }
+    ]
+  },
+  {
+    "name": "software",
+    "description": "my self-hosted stack",
+    "cards": [
+      {
+        "name": "shared",
+        "description": "a file-sharing server akin to 0x0.st",
+        "url": "https://shared.1707070.xyz"
+      },
+      {
+        "name": "dacian.co",
+        "description": "dynamic web application built with Go and htmx",
+        "url": "https://dacian.co"
+      }
+    ]
+  }
+]
