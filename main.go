@@ -18,16 +18,23 @@ const (
 func main() {
 	godotenv.Load()
 	r := gin.Default()
+	gin.SetMode(gin.ReleaseMode)
 	r.LoadHTMLGlob("templates/**/*")
 	r.Static("static/", "./static/")
-	r.Static("data/", "./data/")
+	// r.Static("data/", "./data/")
 
 	pages, err := getCardPagesFromJson("./data/cards.json")
 	if err != nil {
 		log.Fatal(err)
 	}
-	projects := getCardPageByName(pages, "projects")
-	software := getCardPageByName(pages, "software")
+	projects, err := getCardPageByName(pages, "projects")
+	if err != nil {
+		log.Println()
+	}
+	software, err := getCardPageByName(pages, "software")
+	if err != nil {
+		log.Println()
+	}
 	ct := &CurrentTrack{}
 	cs := &CurrentStats{}
 
@@ -35,6 +42,9 @@ func main() {
 		tracks, err := getScrobbles(os.Getenv("LASTFM_USERNAME"), os.Getenv("LASTFM_API_KEY"))
 		if err != nil {
 			log.Println("failed to fetch scrobbles:", err)
+			return
+		}
+		if len(tracks) == 0 {
 			return
 		}
 		track := GetTrackInfo(tracks[0])
