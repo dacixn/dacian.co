@@ -16,9 +16,9 @@ const (
 )
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	godotenv.Load()
 	r := gin.Default()
-	gin.SetMode(gin.ReleaseMode)
 	r.LoadHTMLGlob("templates/**/*")
 	r.Static("static/", "./static/")
 	// r.Static("data/", "./data/")
