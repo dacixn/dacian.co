@@ -57,7 +57,7 @@ type LastFMResponse struct {
 }
 
 func getScrobbles(user string, key string) ([]Track, error) {
-	requestURL := fmt.Sprintf("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=%s&api_key=%s&format=json", user, key)
+	requestURL := fmt.Sprintf("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=%s&api_key=%s&format=json", user, key)
 	client := &http.Client{Timeout: 10 * time.Second}
 	req, err := http.NewRequest("GET", requestURL, nil)
 	if err != nil {
