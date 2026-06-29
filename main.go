@@ -107,7 +107,7 @@ func main() {
 		track := ct.Get()
 
 		c.HTML(http.StatusOK, "music.html", gin.H{
-			"Title":    strings.ToLower(truncate(track.Title, 25)),
+			"Title":    strings.ToLower(truncate(track.Title, 30)),
 			"Artist":   strings.ToLower(truncate(track.Artist, 25)),
 			"ImageURL": track.ImageURL,
 		})
