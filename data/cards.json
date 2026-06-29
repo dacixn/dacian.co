@@ -25,8 +25,13 @@
     "description": "my self-hosted stack",
     "cards": [
       {
+        "name": "trilium",
+        "description": "hierarchical note taking application",
+        "url": "https://trilium.dacian.co"
+      },
+      {
         "name": "shared",
-        "description": "a file-sharing server akin to 0x0.st",
+        "description": "a file sharing server akin to 0x0.st",
         "url": "https://shared.1707070.xyz"
       }
     ]
