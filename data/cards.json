@@ -30,9 +30,9 @@
         "url": "https://trilium.dacian.co"
       },
       {
-        "name": "shared",
-        "description": "a file sharing server akin to 0x0.st",
-        "url": "https://shared.dacian.co"
+        "name": "excalidraw",
+        "description": "collaborative whiteboard",
+        "url": "https://exc.dacian.co"
       }
     ]
   }
