@@ -1,7 +1,7 @@
 [
   {
     "name": "projects",
-    "description": "open-source learning experiences",
+    "description": "open source learning experiences",
     "cards": [
       {
         "name": "dacian.co",
@@ -22,7 +22,7 @@
   },
   {
     "name": "software",
-    "description": "my self-hosted stack<br>(auth may be required)",
+    "description": "my self-hosted stack (auth may be required)",
     "cards": [
       {
         "name": "trilium",
