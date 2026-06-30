@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 :root {
-  --color-1: #f2f8ff;
-  --color-2: #d9eaff;
-  --color-3: #024657;
-  --color-4: #066588;
-  --color-5: #012026;
+  --color-1: #f2f6ff;
+  --color-2: #d9dfff;
+  --color-3: #022867;
+  --color-4: #104088;
+  --color-5: #011626;
 }
 
 * {
