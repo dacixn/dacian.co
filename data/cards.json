@@ -9,20 +9,20 @@
         "url": "https://github.com/dacixn/dacian.co"
       },
       {
-        "name": "sift",
-        "description": "a personalised tool for sorting files according to your needs",
-        "url": "https://github.com/dacixn/sift"
-      },
-      {
         "name": "shared-cli",
         "description": "remote CLI for Shared, a file-sharing server",
         "url": "https://github.com/dacixn/shared-cli"
+      },
+      {
+        "name": "sift",
+        "description": "a personalised tool for sorting files according to your needs",
+        "url": "https://github.com/dacixn/sift"
       }
     ]
   },
   {
     "name": "software",
-    "description": "my self-hosted stack",
+    "description": "my self-hosted stack<br>(auth may be required)",
     "cards": [
       {
         "name": "trilium",
@@ -32,7 +32,7 @@
       {
         "name": "shared",
         "description": "a file sharing server akin to 0x0.st",
-        "url": "https://shared.1707070.xyz"
+        "url": "https://shared.dacian.co"
       }
     ]
   }
