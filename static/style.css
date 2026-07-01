@@ -137,7 +137,7 @@ p,
 .music-info {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.25rem;
+  padding: 0.25rem;
 }
 .music img {
   max-width: 125px;
